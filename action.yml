@@ -1,0 +1,18 @@
+name: "Comment On Issue"
+description: "Posts a comment to a GitHub issue"
+inputs:
+  token: # id of input
+    description: "A GitHub token for the user posting the comment"
+    required: true
+  issue: # id of input
+    description: "The issue to post the comment on."
+    required: true
+  comment:
+    description: "The comment to post."
+    required: true
+  comment-id: # id of input
+    description: "An optional id preventing the comment to be posted twice."
+    required: false
+runs:
+  using: "node12"
+  main: "dist/index.js"
